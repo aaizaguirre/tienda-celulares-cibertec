@@ -8,6 +8,8 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import java.awt.Font;
 import javax.swing.JMenuItem;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TiendaCelulares extends JFrame {
 	
@@ -113,6 +115,11 @@ public class TiendaCelulares extends JFrame {
 		menuBar.add(mnArchivo);
 		
 		JMenuItem mntmSalir = new JMenuItem("Salir");
+		mntmSalir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
 		mnArchivo.add(mntmSalir);
 		
 		JMenu mnMantenimiento = new JMenu("Mantenimiento");
