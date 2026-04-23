@@ -77,6 +77,29 @@ public class TiendaCelulares extends JFrame {
 	public static String obsequio1 = "Audífonos";
 	public static String obsequio2 = "Funda protectora";
 	public static String obsequio3 = "Power bank";
+	
+	// Declaración de variables
+	Font titulosMenu = new Font("Segoe UI", Font.BOLD, 14);
+	
+	JMenuBar menuBar;
+	
+	JMenu mnArchivo;
+	JMenuItem mntmSalir;
+	
+	JMenu mnMantenimiento;
+	JMenuItem mntmConsultar;
+	JMenuItem mntmModificar;
+	JMenuItem mntmListar;
+	
+	JMenu mnVentas;
+	JMenuItem mntmVender;
+	
+	JMenu mnConfiguracion;
+	JMenuItem mntmDescuentos;
+	JMenuItem mntmObsequios;
+	
+	JMenu mnAyuda;
+	JMenuItem mntmAcercaDe;
 
 	// ===== ATRIBUTOS DE GUI =====
 	
@@ -107,57 +130,59 @@ public class TiendaCelulares extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		JMenuBar menuBar = new JMenuBar();
+		menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
-		JMenu mnArchivo = new JMenu("Archivo");
-		mnArchivo.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		mnArchivo = new JMenu("Archivo");
+		mnArchivo.setFont(titulosMenu);
 		menuBar.add(mnArchivo);
 		
-		JMenuItem mntmSalir = new JMenuItem("Salir");
-		mntmSalir.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
-			}
-		});
+		mntmSalir = new JMenuItem("Salir");
 		mnArchivo.add(mntmSalir);
 		
-		JMenu mnMantenimiento = new JMenu("Mantenimiento");
-		mnMantenimiento.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		mnMantenimiento = new JMenu("Mantenimiento");
+		mnMantenimiento.setFont(titulosMenu);
 		menuBar.add(mnMantenimiento);
 		
-		JMenuItem mntmConsultar = new JMenuItem("Consultar celular");
+		mntmConsultar = new JMenuItem("Consultar celular");
 		mnMantenimiento.add(mntmConsultar);
 		
-		JMenuItem mntmModificar = new JMenuItem("Modificar celular");
+		mntmModificar = new JMenuItem("Modificar celular");
 		mnMantenimiento.add(mntmModificar);
 		
-		JMenuItem mntmListar = new JMenuItem("Listar celulares");
+		mntmListar = new JMenuItem("Listar celulares");
 		mnMantenimiento.add(mntmListar);
 		
-		JMenu mnVentas = new JMenu("Ventas");
-		mnVentas.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		mnVentas = new JMenu("Ventas");
+		mnVentas.setFont(titulosMenu);
 		menuBar.add(mnVentas);
 		
-		JMenuItem mntmVender = new JMenuItem("Vender");
+		mntmVender = new JMenuItem("Vender");
 		mnVentas.add(mntmVender);
 		
-		JMenu mnConfiguracion = new JMenu("Configuración");
-		mnConfiguracion.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		mnConfiguracion = new JMenu("Configuración");
+		mnConfiguracion.setFont(titulosMenu);
 		menuBar.add(mnConfiguracion);
 		
-		JMenuItem mntmDescuentos = new JMenuItem("Configurar descuentos");
+		mntmDescuentos = new JMenuItem("Configurar descuentos");
 		mnConfiguracion.add(mntmDescuentos);
 		
-		JMenuItem mntmObsequios = new JMenuItem("Configurar obsequios");
+		mntmObsequios = new JMenuItem("Configurar obsequios");
 		mnConfiguracion.add(mntmObsequios);
 		
-		JMenu mnAyuda = new JMenu("Ayuda");
-		mnAyuda.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		mnAyuda = new JMenu("Ayuda");
+		mnAyuda.setFont(titulosMenu);
 		menuBar.add(mnAyuda);
 		
-		JMenuItem mntmAcercaDe = new JMenuItem("Acerca de Tienda");
+		mntmAcercaDe = new JMenuItem("Acerca de Tienda");
 		mnAyuda.add(mntmAcercaDe);
-
+		
+		// Eventos
+		mntmSalir.addActionListener(e -> salir());
+	}
+	
+	// Métodos
+	private void salir() {
+		System.exit(0);
 	}
 }
