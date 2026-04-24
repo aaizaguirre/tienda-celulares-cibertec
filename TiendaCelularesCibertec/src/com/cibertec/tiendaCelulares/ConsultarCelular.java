@@ -129,6 +129,7 @@ public class ConsultarCelular extends JDialog {
 		btnCerrar.addActionListener(e -> dispose());
 		comboBox.addActionListener(e -> definirDatos());
 		
+		// Iniciar con los datos del pimer modelo ya establecidos
 		definirDatos();
 		
 	}
