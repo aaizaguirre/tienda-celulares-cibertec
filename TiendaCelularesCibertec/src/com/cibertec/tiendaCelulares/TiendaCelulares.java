@@ -190,10 +190,15 @@ public class TiendaCelulares extends JFrame {
 		
 		// Eventos
 		mntmSalir.addActionListener(e -> salir());
+		mntmConsultar.addActionListener(e -> abrirConsultar());
 	}
 	
 	// Métodos
 	private void salir() {
 		System.exit(0);
+	}
+	
+	private void abrirConsultar() {
+		new ConsultarCelular().setVisible(true);
 	}
 }
