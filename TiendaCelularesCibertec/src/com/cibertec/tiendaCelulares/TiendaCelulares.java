@@ -191,6 +191,7 @@ public class TiendaCelulares extends JFrame {
 		// Eventos
 		mntmSalir.addActionListener(e -> salir());
 		mntmConsultar.addActionListener(e -> abrirConsultar());
+		mntmModificar.addActionListener(e -> abrirModificar());
 	}
 	
 	// Métodos
@@ -200,5 +201,9 @@ public class TiendaCelulares extends JFrame {
 	
 	private void abrirConsultar() {
 		new ConsultarCelular().setVisible(true);
+	}
+	
+	private void abrirModificar() {
+		new ModificarCelular().setVisible(true);
 	}
 }
