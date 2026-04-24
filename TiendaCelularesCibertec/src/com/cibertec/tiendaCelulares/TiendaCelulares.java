@@ -10,6 +10,8 @@ import java.awt.Font;
 import javax.swing.JMenuItem;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 
 public class TiendaCelulares extends JFrame {
 	
@@ -122,6 +124,7 @@ public class TiendaCelulares extends JFrame {
 
 	// ===== CONSTRUCTOR =====
 	public TiendaCelulares() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(TiendaCelulares.class.getResource("/img/store.png")));
 		setTitle("Tienda 1.0");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 600, 350);
@@ -138,6 +141,7 @@ public class TiendaCelulares extends JFrame {
 		menuBar.add(mnArchivo);
 		
 		mntmSalir = new JMenuItem("Salir");
+		mntmSalir.setIcon(new ImageIcon(TiendaCelulares.class.getResource("/img/exit.png")));
 		mnArchivo.add(mntmSalir);
 		
 		mnMantenimiento = new JMenu("Mantenimiento");
@@ -145,12 +149,15 @@ public class TiendaCelulares extends JFrame {
 		menuBar.add(mnMantenimiento);
 		
 		mntmConsultar = new JMenuItem("Consultar celular");
+		mntmConsultar.setIcon(new ImageIcon(TiendaCelulares.class.getResource("/img/query.png")));
 		mnMantenimiento.add(mntmConsultar);
 		
 		mntmModificar = new JMenuItem("Modificar celular");
+		mntmModificar.setIcon(new ImageIcon(TiendaCelulares.class.getResource("/img/modify.png")));
 		mnMantenimiento.add(mntmModificar);
 		
 		mntmListar = new JMenuItem("Listar celulares");
+		mntmListar.setIcon(new ImageIcon(TiendaCelulares.class.getResource("/img/list.png")));
 		mnMantenimiento.add(mntmListar);
 		
 		mnVentas = new JMenu("Ventas");
@@ -158,6 +165,7 @@ public class TiendaCelulares extends JFrame {
 		menuBar.add(mnVentas);
 		
 		mntmVender = new JMenuItem("Vender");
+		mntmVender.setIcon(new ImageIcon(TiendaCelulares.class.getResource("/img/sell.png")));
 		mnVentas.add(mntmVender);
 		
 		mnConfiguracion = new JMenu("Configuración");
@@ -165,9 +173,11 @@ public class TiendaCelulares extends JFrame {
 		menuBar.add(mnConfiguracion);
 		
 		mntmDescuentos = new JMenuItem("Configurar descuentos");
+		mntmDescuentos.setIcon(new ImageIcon(TiendaCelulares.class.getResource("/img/discount.png")));
 		mnConfiguracion.add(mntmDescuentos);
 		
 		mntmObsequios = new JMenuItem("Configurar obsequios");
+		mntmObsequios.setIcon(new ImageIcon(TiendaCelulares.class.getResource("/img/gift.png")));
 		mnConfiguracion.add(mntmObsequios);
 		
 		mnAyuda = new JMenu("Ayuda");
@@ -175,6 +185,7 @@ public class TiendaCelulares extends JFrame {
 		menuBar.add(mnAyuda);
 		
 		mntmAcercaDe = new JMenuItem("Acerca de Tienda");
+		mntmAcercaDe.setIcon(new ImageIcon(TiendaCelulares.class.getResource("/img/about.png")));
 		mnAyuda.add(mntmAcercaDe);
 		
 		// Eventos
