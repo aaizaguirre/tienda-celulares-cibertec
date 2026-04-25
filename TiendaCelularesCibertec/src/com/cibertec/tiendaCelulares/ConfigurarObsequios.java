@@ -110,7 +110,11 @@ public class ConfigurarObsequios extends JDialog {
 			    JOptionPane.showMessageDialog(this, "Ingrese valores válidos", "Error", JOptionPane.ERROR_MESSAGE);
 			    return;
 			}
-		dispose();
+		else {
+			TiendaCelulares.obsequio1 = tfObsequio1.getText().trim();
+			TiendaCelulares.obsequio2 = tfObsequio2.getText().trim();
+			TiendaCelulares.obsequio3 = tfObsequio3.getText().trim();
+			dispose();
+		}
 	}
-
 }
