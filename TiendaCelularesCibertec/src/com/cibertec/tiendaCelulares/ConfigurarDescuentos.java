@@ -26,9 +26,6 @@ public class ConfigurarDescuentos extends JDialog {
 	private JTextField tf2;
 	private JTextField tf3;
 	private JTextField tf4;
-	private JLabel lbl1b;
-	private JLabel lbl1c;
-	private JLabel lbl1d;
 
 	/**
 	 * Launch the application.
@@ -143,7 +140,10 @@ public class ConfigurarDescuentos extends JDialog {
 			double valor2 = Double.parseDouble(tf2.getText().trim());
 			double valor3 = Double.parseDouble(tf3.getText().trim());
 			double valor4 = Double.parseDouble(tf4.getText().trim());
-			if (valor1 >= 0 && valor2 >= 0 && valor3 >= 0 && valor4 >= 0) {
+			if (valor1 >= 0 && valor1 <= 100 &&
+					valor2 >= 0 && valor2 <= 100 &&
+				    valor3 >= 0 && valor3 <= 100 &&
+				    valor4 >= 0 && valor4 <= 100) {
 				TiendaCelulares.porcentaje1 = valor1;
 				TiendaCelulares.porcentaje2 = valor2;
 				TiendaCelulares.porcentaje3 = valor3;
