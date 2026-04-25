@@ -200,6 +200,7 @@ public class TiendaCelulares extends JFrame {
 		mntmListar.addActionListener(e -> abrirListar());
 		mntmVender.addActionListener(e -> abrirVender());
 		mntmDescuentos.addActionListener(e -> abrirDescuentos());
+		mntmObsequios.addActionListener(e -> abrirObsequios());
 	}
 	
 	// Métodos
@@ -225,5 +226,9 @@ public class TiendaCelulares extends JFrame {
 	
 	private void abrirDescuentos() {
 		new ConfigurarDescuentos().setVisible(true);
+	}
+	
+	private void abrirObsequios() {
+		new ConfigurarObsequios().setVisible(true);
 	}
 }
