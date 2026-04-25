@@ -80,6 +80,11 @@ public class TiendaCelulares extends JFrame {
 	public static String obsequio2 = "Funda protectora";
 	public static String obsequio3 = "Power bank";
 	
+	// Variables de venta
+	public static int numeroVentas = 0;
+	public static double importeTotalAcumulado = 0;
+	public static double cuotaDiaria = 20000;
+	
 	// Declaración de variables
 	Font titulosMenu = new Font("Segoe UI", Font.BOLD, 14);
 	
@@ -193,6 +198,7 @@ public class TiendaCelulares extends JFrame {
 		mntmConsultar.addActionListener(e -> abrirConsultar());
 		mntmModificar.addActionListener(e -> abrirModificar());
 		mntmListar.addActionListener(e -> abrirListar());
+		mntmVender.addActionListener(e -> abrirVender());
 	}
 	
 	// Métodos
@@ -210,5 +216,9 @@ public class TiendaCelulares extends JFrame {
 	
 	private void abrirListar() {
 		new ListarCelulares().setVisible(true);
+	}
+	
+	private void abrirVender() {
+		new VenderCelular().setVisible(true);
 	}
 }
