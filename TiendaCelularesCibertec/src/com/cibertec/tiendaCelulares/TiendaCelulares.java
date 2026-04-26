@@ -12,6 +12,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 
 public class TiendaCelulares extends JFrame {
 	
@@ -112,6 +114,7 @@ public class TiendaCelulares extends JFrame {
 	
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
+	private JLabel lblLogo;
 
 	// ===== MAIN =====
 	public static void main(String[] args) {
@@ -137,6 +140,19 @@ public class TiendaCelulares extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		lblLogo = new JLabel("");
+		lblLogo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblLogo.setIcon(new ImageIcon(TiendaCelulares.class.getResource("/img/logoTienda.png")));
+		lblLogo.setBounds(263, 11, 297, 263);
+		contentPane.add(lblLogo);
+		
+		JLabel lblBienvenida = new JLabel("Bienvenido");
+		lblBienvenida.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblBienvenida.setHorizontalAlignment(SwingConstants.CENTER);
+		lblBienvenida.setBounds(0, 0, 253, 274);
+		contentPane.add(lblBienvenida);
 		
 		menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
