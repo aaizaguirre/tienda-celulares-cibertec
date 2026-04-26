@@ -157,7 +157,7 @@ public class VenderCelular extends JDialog {
 			cantidad = Integer.parseInt(tfCantidad.getText().trim());
 			if(cantidad > 0) {
 				double importeCompra = Math.round(precio * cantidad);
-				double importeDescuento = Math.round(descuento() * 0.01* importeCompra);
+				double importeDescuento =  Math.round(descuento() * 0.01 * importeCompra * 100.0) / 100.0;
 				double importePagar = importeCompra - importeDescuento;
 				
 				TiendaCelulares.numeroVentas++;
