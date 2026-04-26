@@ -1,9 +1,7 @@
 package com.cibertec.tiendaCelulares;
 
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
 import java.awt.Font;
-
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
@@ -180,6 +178,11 @@ public class ModificarCelular extends JDialog {
 	        int almacenamiento = Integer.parseInt(tfAlmacenamiento.getText().trim());
 	        int anio = Integer.parseInt(tfAnioLanzamiento.getText().trim());
 	        double pantalla = Double.parseDouble(tfTamanioPantalla.getText().trim());
+	        
+	        if(precio <= 0 || almacenamiento <= 0 || pantalla <= 0 || anio < 2010|| anio > 2026){
+	        	JOptionPane.showMessageDialog(this, "Ingrese valores válidos", "Error", JOptionPane.ERROR_MESSAGE);
+	            return;
+			}
 	        
 	        switch(indice) {
 	        case 0:
