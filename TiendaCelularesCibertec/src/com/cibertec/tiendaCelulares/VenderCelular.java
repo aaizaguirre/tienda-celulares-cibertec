@@ -173,7 +173,7 @@ public class VenderCelular extends JDialog {
 				textArea.append("\nObsequio: " + obsequio());
 				
 				if(TiendaCelulares.numeroVentas % 5 == 0) {
-					double porcentajeCuota = (TiendaCelulares.importeTotalAcumulado / TiendaCelulares.cuotaDiaria) * 100;
+					double porcentajeCuota = Math.round((TiendaCelulares.importeTotalAcumulado / TiendaCelulares.cuotaDiaria) * 10000.0) / 100.0;
 					
 					JOptionPane.showMessageDialog(this,
 					        "Ventas realizadas: " + TiendaCelulares.numeroVentas +
