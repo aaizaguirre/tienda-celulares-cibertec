@@ -148,10 +148,10 @@ public class ConfigurarDescuentos extends JDialog {
 				TiendaCelulares.porcentaje2 = valor2;
 				TiendaCelulares.porcentaje3 = valor3;
 				TiendaCelulares.porcentaje4 = valor4;
+				dispose();
 			} else {
 				JOptionPane.showMessageDialog(this, "Ingrese valores numéricos válidos", "Error", JOptionPane.ERROR_MESSAGE);
 			}
-			dispose();
 		} catch(NumberFormatException error) {
 			JOptionPane.showMessageDialog(this, "Ingrese valores numéricos válidos", "Error", JOptionPane.ERROR_MESSAGE);
 		}
