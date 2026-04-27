@@ -5,6 +5,7 @@ import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 import java.awt.Toolkit;
 import javax.swing.JLabel;
@@ -26,7 +27,7 @@ public class VenderCelular extends JDialog {
 	private JTextField tfPrecio;
 	private JTextField tfCantidad;
 	JComboBox<String> comboBox;
-	JTextArea textArea;
+	JTextArea textArea = new JTextArea();;
 	
 	String modelo;
 	double precio;
@@ -103,10 +104,11 @@ public class VenderCelular extends JDialog {
 		btnCerrar.setBounds(320, 66, 89, 23);
 		contentPanel.add(btnCerrar);
 		
-		textArea = new JTextArea();
-		textArea.setBounds(10, 120, 414, 130);
-		contentPanel.add(textArea);
-		
+		JScrollPane scrollPane = new JScrollPane(textArea);
+		textArea.setEditable(false);
+		scrollPane.setBounds(10, 120, 414, 130);
+		contentPanel.add(scrollPane);
+
 		// Eventos
 		comboBox.addActionListener(e -> mostrarPrecio());
 		btnVender.addActionListener(e -> vender());
@@ -164,7 +166,7 @@ public class VenderCelular extends JDialog {
 				TiendaCelulares.numeroVentas++;
 				TiendaCelulares.importeTotalAcumulado += importePagar;
 				
-				textArea.setText("BOLETA DE VENTA\n");
+				textArea.setText("BOLETA DE VENTA\n\n");
 				textArea.append("Modelo: " + modelo);
 				textArea.append("\nPrecio (S/.): " + precio);
 				textArea.append("\nCantidad: " + cantidad);
@@ -172,6 +174,8 @@ public class VenderCelular extends JDialog {
 				textArea.append("\nImporte Descuento: " + "S/." + importeDescuento);
 				textArea.append("\nImporte a Pagar: " + "S/." + importePagar);
 				textArea.append("\nObsequio: " + obsequio());
+				
+				textArea.setCaretPosition(0);
 				
 				if(TiendaCelulares.numeroVentas % 5 == 0) {
 					double porcentajeCuota = Math.round((TiendaCelulares.importeTotalAcumulado / TiendaCelulares.cuotaDiaria) * 10000.0) / 100.0;
