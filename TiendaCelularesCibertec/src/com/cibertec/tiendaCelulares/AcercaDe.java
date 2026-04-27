@@ -60,37 +60,37 @@ public class AcercaDe extends JDialog {
 		lblAutores.setBounds(10, 72, 414, 50);
 		contentPanel.add(lblAutores);
 		
-		JLabel lblAaron = new JLabel("Raúl Aarón Izaguirre Olortegui");
-		lblAaron.setForeground(Color.LIGHT_GRAY);
-		lblAaron.setHorizontalAlignment(SwingConstants.CENTER);
-		lblAaron.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblAaron.setBounds(20, 133, 404, 22);
-		contentPanel.add(lblAaron);
+		JLabel lblLuana = new JLabel("Luana Reyna Frias Morales");
+		lblLuana.setForeground(Color.LIGHT_GRAY);
+		lblLuana.setHorizontalAlignment(SwingConstants.CENTER);
+		lblLuana.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lblLuana.setBounds(20, 133, 404, 22);
+		contentPanel.add(lblLuana);
 		
 		JButton btnCerrar = new JButton("Cerrar");
 		btnCerrar.setBounds(182, 261, 89, 23);
 		contentPanel.add(btnCerrar);
 		
-		JLabel lblAutor = new JLabel("autor2");
-		lblAutor.setHorizontalAlignment(SwingConstants.CENTER);
-		lblAutor.setForeground(Color.LIGHT_GRAY);
-		lblAutor.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblAutor.setBounds(20, 166, 404, 22);
-		contentPanel.add(lblAutor);
+		JLabel lblLuis = new JLabel("Luis Fabiano Caycho Poma");
+		lblLuis.setHorizontalAlignment(SwingConstants.CENTER);
+		lblLuis.setForeground(Color.LIGHT_GRAY);
+		lblLuis.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lblLuis.setBounds(20, 166, 404, 22);
+		contentPanel.add(lblLuis);
 		
-		JLabel lblAutor_1 = new JLabel("autor3");
-		lblAutor_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblAutor_1.setForeground(Color.LIGHT_GRAY);
-		lblAutor_1.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblAutor_1.setBounds(20, 194, 404, 22);
-		contentPanel.add(lblAutor_1);
+		JLabel lblNicolas = new JLabel("Nicolas Emilio Loli Alaya");
+		lblNicolas.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNicolas.setForeground(Color.LIGHT_GRAY);
+		lblNicolas.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lblNicolas.setBounds(20, 194, 404, 22);
+		contentPanel.add(lblNicolas);
 		
-		JLabel lblAaron_2_1 = new JLabel("autor4");
-		lblAaron_2_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblAaron_2_1.setForeground(Color.LIGHT_GRAY);
-		lblAaron_2_1.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblAaron_2_1.setBounds(20, 228, 404, 22);
-		contentPanel.add(lblAaron_2_1);
+		JLabel lblAaron = new JLabel("Raúl Aarón Izaguirre Olortegui");
+		lblAaron.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAaron.setForeground(Color.LIGHT_GRAY);
+		lblAaron.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lblAaron.setBounds(20, 228, 404, 22);
+		contentPanel.add(lblAaron);
 		
 		// Eventos
 		btnCerrar.addActionListener(e -> dispose());
