@@ -164,7 +164,7 @@ public class VenderCelular extends JDialog {
 				double importePagar = importeCompra - importeDescuento;
 				
 				TiendaCelulares.numeroVentas++;
-				TiendaCelulares.importeTotalAcumulado += importePagar;
+				TiendaCelulares.importeTotalAcumulado = Math.round((TiendaCelulares.importeTotalAcumulado + importePagar) * 100.0) / 100.0;
 				
 				textArea.setText("BOLETA DE VENTA\n\n");
 				textArea.append("Modelo: " + modelo);
